@@ -1,0 +1,26 @@
+2025-09-12 14:29:02 DEBUG [paymentsvc] Cache updated
+2025-09-12 14:29:02 WARN [worker] Rate limit approaching
+2025-09-12 14:29:03 ERROR [analyticsvc] Service unavailable
+2025-09-12 14:29:03 INFO [ordersvc] Request processed successfully
+2025-09-12 14:29:04 WARN [websocket] Disk space low: 80%
+2025-09-12 14:29:04 INFO [notificationsvc] Request processed successfully
+2025-09-12 14:29:05 INFO [gateway] File uploaded successfully
+2025-09-12 14:29:05 INFO [paymentsvc] Background job completed
+2025-09-12 14:29:06 INFO [scheduler] User login successful
+2025-09-12 14:29:06 INFO [scheduler] API response time: 1301ms
+2025-09-12 14:29:07 WARN [analyticsvc] Queue size growing: 386
+2025-09-12 14:29:07 CRITICAL [inventorysvc] Data corruption detected
+2025-09-12 14:29:08 WARN [ordersvc] Resource usage high: 89%
+2025-09-12 14:29:08 INFO [authsvc] Background job completed
+2025-09-12 14:29:09 WARN [usersvc] Rate limit approaching
+2025-09-12 14:29:09 DEBUG [authsvc] Background job completed
+2025-09-12 14:29:10 INFO [usersvc] API response time: 1045ms
+2025-09-12 14:29:10 INFO [paymentsvc] Data synchronized
+2025-09-12 14:29:11 INFO [websocket] Background job completed
+2025-09-12 14:29:11 WARN [gateway] High memory usage detected: 70%
+2025-09-12 14:29:12 INFO [websocket] File uploaded successfully
+2025-09-12 14:29:12 INFO [scheduler] Email sent to bot
+2025-09-12 14:29:13 INFO [usersvc] Email sent to guest
+2025-09-12 14:29:13 ERROR [paymentsvc] External service timeout
+2025-09-12 14:29:14 INFO [scheduler] Data synchronized
+2025-09-12 14:29:14 INFO [notificationsvc] Health check passed

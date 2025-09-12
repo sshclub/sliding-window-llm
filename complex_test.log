@@ -1,0 +1,9 @@
+2024-01-15 10:30:15 ERROR [ordersvc] Database connection timeout
+2024-01-15 10:30:16 WARN [paymentsvc] Payment gateway slow response
+2024-01-15 10:30:17 INFO [usersvc] User login successful
+2024-01-15 10:30:18 ERROR [ordersvc] Order processing failed
+2024-01-15 10:30:19 CRITICAL [ordersvc] Service unavailable
+2024-01-15 10:30:20 INFO [ordersvc] Service restarting
+2024-01-15 10:30:21 WARN [inventorysvc] Low stock alert
+2024-01-15 10:30:22 ERROR [ordersvc] Memory usage critical: 95%
+2024-01-15 10:30:23 INFO [ordersvc] Service recovered

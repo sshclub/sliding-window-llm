@@ -1,0 +1,14 @@
+2024-01-15 10:30:15 ERROR [ordersvc] Database connection failed: timeout after 30s
+2024-01-15 10:30:16 WARN [ordersvc] Retrying connection attempt 1/3
+2024-01-15 10:30:17 ERROR [ordersvc] Database connection failed: timeout after 30s
+2024-01-15 10:30:18 WARN [ordersvc] Retrying connection attempt 2/3
+2024-01-15 10:30:19 ERROR [ordersvc] Database connection failed: timeout after 30s
+2024-01-15 10:30:20 ERROR [ordersvc] All retry attempts failed, service degraded
+2024-01-15 10:30:21 INFO [ordersvc] Health check endpoint responding with degraded status
+2024-01-15 10:30:22 WARN [ordersvc] High memory usage detected: 85%
+2024-01-15 10:30:23 ERROR [ordersvc] OutOfMemoryError in order processing thread
+2024-01-15 10:30:24 CRITICAL [ordersvc] Service unavailable - all workers down
+2024-01-15 10:30:25 INFO [ordersvc] Restarting service workers
+2024-01-15 10:30:26 INFO [ordersvc] Service workers restarted successfully
+2024-01-15 10:30:27 INFO [ordersvc] Database connection restored
+2024-01-15 10:30:28 INFO [ordersvc] Service fully operational

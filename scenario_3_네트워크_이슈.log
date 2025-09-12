@@ -1,0 +1,27 @@
+2025-09-12 13:45:26 INFO [notificationsvc] API response time: 90ms
+2025-09-12 13:46:26 INFO [ordersvc] API response time: 140ms
+2025-09-12 13:47:26 INFO [paymentsvc] API response time: 132ms
+2025-09-12 13:48:26 INFO [usersvc] API response time: 122ms
+2025-09-12 13:49:26 INFO [inventorysvc] API response time: 98ms
+2025-09-12 13:50:26 WARN [gateway] API response time: 445ms
+2025-09-12 13:50:26 WARN [paymentsvc] Network latency increasing
+2025-09-12 13:51:26 WARN [gateway] API response time: 384ms
+2025-09-12 13:51:26 WARN [authsvc] Network latency increasing
+2025-09-12 13:52:26 WARN [authsvc] API response time: 267ms
+2025-09-12 13:52:26 WARN [inventorysvc] Network latency increasing
+2025-09-12 13:53:26 WARN [analyticsvc] API response time: 287ms
+2025-09-12 13:53:26 WARN [paymentsvc] Network latency increasing
+2025-09-12 13:54:26 WARN [notificationsvc] API response time: 371ms
+2025-09-12 13:54:26 WARN [notificationsvc] Network latency increasing
+2025-09-12 13:55:26 ERROR [usersvc] API request timeout after 30s
+2025-09-12 13:55:26 ERROR [paymentsvc] Connection refused to external service
+2025-09-12 13:56:26 ERROR [ordersvc] API request timeout after 30s
+2025-09-12 13:56:26 ERROR [analyticsvc] Connection refused to external service
+2025-09-12 13:57:26 ERROR [notificationsvc] API request timeout after 30s
+2025-09-12 13:57:26 ERROR [analyticsvc] Connection refused to external service
+2025-09-12 13:58:26 ERROR [notificationsvc] API request timeout after 30s
+2025-09-12 13:58:26 ERROR [inventorysvc] Connection refused to external service
+2025-09-12 13:59:26 ERROR [analyticsvc] API request timeout after 30s
+2025-09-12 13:59:26 ERROR [gateway] Connection refused to external service
+2025-09-12 14:00:26 INFO [inventorysvc] Network connectivity restored
+2025-09-12 14:01:26 INFO [notificationsvc] API response time: 120ms

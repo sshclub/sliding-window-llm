@@ -1,0 +1,25 @@
+{
+  "total_logs": 26,
+  "by_level": {
+    "DEBUG": 2,
+    "INFO": 15,
+    "WARN": 6,
+    "ERROR": 2,
+    "CRITICAL": 1
+  },
+  "by_service": {
+    "ordersvc": 2,
+    "paymentsvc": 4,
+    "usersvc": 3,
+    "inventorysvc": 1,
+    "notificationsvc": 2,
+    "analyticsvc": 2,
+    "authsvc": 2,
+    "gateway": 2,
+    "apigateway": 0,
+    "websocket": 3,
+    "scheduler": 4,
+    "worker": 1
+  },
+  "start_time": "2025-09-12 14:29:02.112009"
+}

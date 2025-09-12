@@ -1,0 +1,16 @@
+[
+  {
+    "meta": {
+      "service": "ordersvc",
+      "host": "node-01",
+      "severity": "error>warning>info",
+      "time_range": "processed_at=2025-09-12T05:34:07.333147Z",
+      "window_index": 0,
+      "total_windows": 1,
+      "window_tokens": 332,
+      "window_lines": 14
+    },
+    "analysis": "\n**데이터베이스 연결 상태 및 오류:**\n1. 데이터베이스 연결 타임아웃 (30초)\n2. 연결 풀 고갈 (80% 사용)\n3. 쿼리 성능 저하 (2.5초 이상)\n\n**쿼리 성능 및 타임아웃 이슈:**\n1. [높음] 느린 쿼리로 인한 연결 점유\n2. [중간] 인덱스 부족으로 인한 성능 저하\n3. [낮음] 네트워크 지연\n\n**데이터베이스 서버 상태 점검 명령:**\n```bash\n# 연결 상태 확인\nmysqladmin -u root -p processlist\nnetstat -an | grep :3306\n\n# 성능 확인\nSHOW PROCESSLIST;\nSHOW STATUS LIKE 'Threads_connected';\n```\n\n**성능 최적화 및 모니터링 권장사항:**\n1. 연결 풀 크기 증가\n2. 쿼리 최적화 및 인덱스 추가\n3. 데이터베이스 모니터링 설정\n\n**확신도:** 중간\n",
+    "analysis_type": "database"
+  }
+]

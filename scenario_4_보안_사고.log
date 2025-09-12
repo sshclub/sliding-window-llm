@@ -1,0 +1,16 @@
+2025-09-12 13:50:26 WARN [analyticsvc] Multiple failed login attempts from IP 192.168.1.100
+2025-09-12 13:51:26 WARN [ordersvc] Unusual API usage pattern detected
+2025-09-12 13:52:26 ERROR [notificationsvc] SQL injection attempt detected
+2025-09-12 13:52:26 WARN [ordersvc] Rate limit exceeded for IP 192.168.1.100
+2025-09-12 13:53:26 ERROR [paymentsvc] SQL injection attempt detected
+2025-09-12 13:53:26 WARN [usersvc] Rate limit exceeded for IP 192.168.1.100
+2025-09-12 13:54:26 ERROR [authsvc] SQL injection attempt detected
+2025-09-12 13:54:26 WARN [analyticsvc] Rate limit exceeded for IP 192.168.1.100
+2025-09-12 13:55:26 ERROR [notificationsvc] SQL injection attempt detected
+2025-09-12 13:55:26 WARN [usersvc] Rate limit exceeded for IP 192.168.1.100
+2025-09-12 13:56:26 ERROR [ordersvc] SQL injection attempt detected
+2025-09-12 13:56:26 WARN [ordersvc] Rate limit exceeded for IP 192.168.1.100
+2025-09-12 13:57:26 ERROR [gateway] SQL injection attempt detected
+2025-09-12 13:57:26 WARN [usersvc] Rate limit exceeded for IP 192.168.1.100
+2025-09-12 13:58:26 INFO [paymentsvc] IP 192.168.1.100 blocked for 1 hour
+2025-09-12 13:59:26 INFO [gateway] Security incident resolved

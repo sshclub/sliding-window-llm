@@ -1,0 +1,54 @@
+2025-09-12 13:20:26 INFO [gateway] Memory usage: 31%
+2025-09-12 13:21:26 INFO [notificationsvc] Memory usage: 28%
+2025-09-12 13:22:26 INFO [paymentsvc] Memory usage: 35%
+2025-09-12 13:23:26 INFO [analyticsvc] Memory usage: 35%
+2025-09-12 13:24:26 INFO [ordersvc] Memory usage: 33%
+2025-09-12 13:25:26 INFO [gateway] Memory usage: 28%
+2025-09-12 13:26:26 INFO [analyticsvc] Memory usage: 22%
+2025-09-12 13:27:26 INFO [analyticsvc] Memory usage: 22%
+2025-09-12 13:28:26 INFO [usersvc] Memory usage: 29%
+2025-09-12 13:29:26 INFO [gateway] Memory usage: 23%
+2025-09-12 13:30:26 INFO [notificationsvc] Memory usage: 40%
+2025-09-12 13:31:26 INFO [gateway] Memory usage: 42%
+2025-09-12 13:32:26 INFO [usersvc] Memory usage: 44%
+2025-09-12 13:33:26 INFO [authsvc] Memory usage: 46%
+2025-09-12 13:34:26 INFO [analyticsvc] Memory usage: 48%
+2025-09-12 13:35:26 INFO [analyticsvc] Memory usage: 50%
+2025-09-12 13:36:26 INFO [notificationsvc] Memory usage: 52%
+2025-09-12 13:37:26 INFO [notificationsvc] Memory usage: 54%
+2025-09-12 13:38:26 INFO [gateway] Memory usage: 56%
+2025-09-12 13:39:26 INFO [paymentsvc] Memory usage: 58%
+2025-09-12 13:40:26 INFO [authsvc] Memory usage: 60%
+2025-09-12 13:41:26 INFO [ordersvc] Memory usage: 62%
+2025-09-12 13:41:26 WARN [authsvc] High memory usage detected
+2025-09-12 13:42:26 INFO [gateway] Memory usage: 64%
+2025-09-12 13:42:26 WARN [analyticsvc] High memory usage detected
+2025-09-12 13:43:26 INFO [notificationsvc] Memory usage: 66%
+2025-09-12 13:43:26 WARN [inventorysvc] High memory usage detected
+2025-09-12 13:44:26 INFO [authsvc] Memory usage: 68%
+2025-09-12 13:44:26 WARN [gateway] High memory usage detected
+2025-09-12 13:45:26 ERROR [usersvc] Memory usage: 70%
+2025-09-12 13:45:26 WARN [usersvc] GC pressure increasing
+2025-09-12 13:46:26 ERROR [inventorysvc] Memory usage: 73%
+2025-09-12 13:46:26 WARN [analyticsvc] GC pressure increasing
+2025-09-12 13:47:26 ERROR [notificationsvc] Memory usage: 76%
+2025-09-12 13:47:26 WARN [analyticsvc] GC pressure increasing
+2025-09-12 13:48:26 ERROR [ordersvc] Memory usage: 79%
+2025-09-12 13:48:26 WARN [inventorysvc] GC pressure increasing
+2025-09-12 13:49:26 ERROR [paymentsvc] Memory usage: 82%
+2025-09-12 13:49:26 WARN [ordersvc] GC pressure increasing
+2025-09-12 13:50:26 ERROR [authsvc] Memory usage: 85%
+2025-09-12 13:50:26 WARN [paymentsvc] GC pressure increasing
+2025-09-12 13:51:26 ERROR [inventorysvc] Memory usage: 88%
+2025-09-12 13:51:26 WARN [ordersvc] GC pressure increasing
+2025-09-12 13:52:26 ERROR [authsvc] Memory usage: 91%
+2025-09-12 13:52:26 WARN [usersvc] GC pressure increasing
+2025-09-12 13:53:26 ERROR [gateway] Memory usage: 94%
+2025-09-12 13:53:26 WARN [inventorysvc] GC pressure increasing
+2025-09-12 13:54:26 ERROR [gateway] Memory usage: 97%
+2025-09-12 13:54:26 WARN [analyticsvc] GC pressure increasing
+2025-09-12 13:55:26 CRITICAL [usersvc] Memory usage: 95%
+2025-09-12 13:56:26 ERROR [notificationsvc] OutOfMemoryError in worker thread
+2025-09-12 13:57:26 CRITICAL [inventorysvc] Service restarting due to memory pressure
+2025-09-12 13:58:26 INFO [analyticsvc] Service restarted
+2025-09-12 13:59:26 INFO [notificationsvc] Memory usage: 25%

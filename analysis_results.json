@@ -1,0 +1,13 @@
+[
+  {
+    "meta": {
+      "service": "ordersvc",
+      "host": "node-01",
+      "severity": "error>warning>info",
+      "time_range": "processed_at=2025-09-12T05:23:46.225472Z",
+      "window_index": 0,
+      "total_windows": 1
+    },
+    "analysis": "### 1. 핵심 증상\n1. **Database Connection Timeout**: `ordersvc`, `paymentsvc`, `inventorysvc`, `usersvc`에서 발생.\n2. **Database Recovery Attempts Failed**: `usersvc`, `notificationsvc`, `analyticsvc`에서 실패.\n3. **Gateway Database Pool Full**: `gateway`에서 경고 메시지.\n\n### 2. 원인 가설(우선순위)\n1. **Database Server Overload**: 데이터베이스 서버가 과부하되어 연결 시간 초과가 발생.\n2. **Network Issues**: 네트워크 문제로 인해 서비스 간 통신이 중단됨.\n3. **Configuration Errors**: 데이터베이스 연결 설정 오류.\n\n### 3. 즉시 점검 명령(쉘)\n```sh\n# Check database server status\nssh db-server \"top\"  # Check overall system load\nssh db-server \"htop\"  # Detailed process monitoring\nssh db-server \"free -m\"  # Memory usage\nssh db-server \"df -h\"  # Disk space usage\n\n# Check network latency and packet loss\nssh node-01 \"ping -c 10 db-server\"\n\n# Check database connection pool status\nssh db-server \"mysqladmin -u user -p password processlist\"  # MySQL process list\nssh db-server \"pgrep -l postgres\"  # PostgreSQL process list\n```\n\n### 4. 재발방지 액션\n1. **Increase Database Connection Pool Size**: 데이터베이스 연결 풀 크기를 늘리거나, 필요에 따라 자동 조정하도록 설정.\n2. **Optimize Queries**: 느린 쿼리를 최적화하여 데이터베이스 부하를 줄임.\n3. **Improve Network Stability**: 네트워크 연결을 강화하고, 대역폭과 패킷 손실을 감소시키는 데 집중.\n4. **Regular Monitoring**: 정기적인 모니터링을 통해 이상 징후를 미리 발견하고 대응.\n5. **Review Configuration Settings**: 데이터베이스 및 네트워크 설정을 검토하고 필요한 변경 사항을 적용.\n\n### 5. 확신도\n**중간**: 증상은 명확하지만, 여러 원인이 있을 수 있으며 추가적인 정보 수집이 필요합니다."
+  }
+]
