@@ -1,0 +1,149 @@
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    🏗️ SLIDING WINDOW LLM PIPELINE ARCHITECTURE                  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+                    📊 DATA FLOW ARCHITECTURE
+                    
+    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+    │ 📝 LOG      │    │ 🔄 SLIDING  │    │ 🧠 PROMPT   │    │ 🤖 vLLM     │
+    │ SOURCES     │───▶│ WINDOW      │───▶│ TEMPLATES   │───▶│ SERVER      │
+    │             │    │ MODULE      │    │ MODULE      │    │             │
+    │ • System    │    │ • Token     │    │ • 7 Types   │    │ • Qwen 7B   │
+    │ • App       │    │   counting  │    │ • Auto      │    │ • OpenAI    │
+    │ • Error     │    │ • Overlap   │    │   detection │    │   Compatible│
+    │ • Custom    │    │ • Windows   │    │ • Type      │    │ • GPU       │
+    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+            │                   │                   │                   │
+            ▼                   ▼                   ▼                   ▼
+    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+    │ 📁 LOG      │    │ 📊 WINDOW   │    │ 🎯 ANALYSIS │    │ 📋 JSON     │
+    │ FILES       │    │ STATS       │    │ TYPE        │    │ RESULTS     │
+    │             │    │             │    │             │    │             │
+    │ • Raw logs  │    │ • Tokens    │    │ • General   │    │ • Structured│
+    │ • Processed │    │ • Lines     │    │ • Database  │    │ • Metadata  │
+    │ • Real-time │    │ • Overlap   │    │ • Memory    │    │ • Confidence│
+    │ • Test data │    │ • Index     │    │ • Network   │    │ • Timestamp │
+    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+
+                    🔄 REAL-TIME SYSTEM ARCHITECTURE
+                    
+    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+    │ 📝 REALTIME │    │ 👁️ LOG      │    │ ⚡ AUTO     │    │ 📊 DASHBOARD│
+    │ LOGGER      │───▶│ MONITOR     │───▶│ ANALYSIS    │───▶│             │
+    │             │    │             │    │             │    │             │
+    │ • Continuous│    │ • File      │    │ • Trigger   │    │ • Real-time │
+    │ • Multi     │    │   watching  │    │ • Process   │    │   stats     │
+    │   scenario  │    │ • Threshold │    │ • Aggregate │    │ • Status    │
+    │ • Auto      │    │ • Events    │    │ • Store     │    │ • History   │
+    │   rotation  │    │ • Alerts    │    │ • Report    │    │ • Control   │
+    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+
+                    🧪 TESTING & DEVELOPMENT ARCHITECTURE
+                    
+    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+    │ 🎲 LOG      │    │ 🧪 INTERACTIVE│   │ 📦 BATCH    │    │ ⚡ PERFORMANCE│
+    │ GENERATOR   │───▶│ TEST        │───▶│ TEST        │───▶│ TEST        │
+    │             │    │             │    │             │    │             │
+    │ • Scenario  │    │ • User      │    │ • Multiple  │    │ • Load      │
+    │   1-6       │    │   input     │    │   files     │    │   testing   │
+    │ • Realistic │    │ • File      │    │ • Parallel  │    │ • Benchmark │
+    │ • Test data │    │   selection │    │   processing│    │ • Metrics   │
+    │ • Custom    │    │ • Live      │    │ • Reports   │    │ • Analysis  │
+    │   scenarios │    │   analysis  │    │ • Statistics│    │ • Optimization│
+    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+
+                    🎯 ANALYSIS TYPES ARCHITECTURE
+                    
+    ┌─────────────┬─────────────┬─────────────┬─────────────┬─────────────┐
+    │ 🔍 GENERAL  │ 🗄️ DATABASE │ 💾 MEMORY   │ 🌐 NETWORK  │ 🔒 SECURITY │
+    │             │             │             │             │             │
+    │ • Generic   │ • DB errors │ • Memory    │ • Timeouts  │ • Attacks   │
+    │ • Mixed     │ • Conn      │   leaks     │ • Latency   │ • Breaches  │
+    │ • Unknown   │ • Queries   │ • OOM       │ • Failures  │ • Unauthorized│
+    └─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    │ ⚡ PERFORMANCE│ 🚨 CRITICAL │             │             │             │
+    │             │             │             │             │             │
+    │ • Bottlenecks│ • System    │             │             │             │
+    │ • Slow      │   down      │             │             │             │
+    │ • Resource  │ • Fatal     │             │             │             │
+    │   usage     │ • Emergency │             │             │             │
+    └─────────────┴─────────────┴─────────────┴─────────────┴─────────────┘
+
+                    🚀 DEPLOYMENT ARCHITECTURE
+                    
+    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+    │ 💻 DEV      │    │ 🧪 TEST     │    │ 🏭 PROD     │    │ 📊 MONITOR  │
+    │ ENVIRONMENT │───▶│ ENVIRONMENT │───▶│ ENVIRONMENT │───▶│ ENVIRONMENT │
+    │             │    │             │    │             │    │             │
+    │ • Local     │    │ • Test      │    │ • vLLM      │    │ • Dashboard │
+    │ • Mock      │    │   suite     │    │   server    │    │ • Alerts    │
+    │ • Debug     │    │ • Batch     │    │ • Auto      │    │ • Metrics   │
+    │ • Single    │    │ • Perf      │    │   scaling   │    │ • Logs      │
+    │   user      │    │   tests     │    │ • Load      │    │ • Reports   │
+    │             │    │             │    │   balancer  │    │ • History   │
+    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+
+                    📈 PERFORMANCE CHARACTERISTICS
+                    
+    ┌─────────────┬─────────────┬─────────────┬─────────────┬─────────────┐
+    │ 🚀 THROUGHPUT│ ⏱️ LATENCY  │ 💾 MEMORY   │ 🎯 ACCURACY │ 🔧 SCALABILITY│
+    │             │             │             │             │             │
+    │ • 1000+     │ • <2s per   │ • 8GB+ RAM  │ • 85%+      │ • Horizontal│
+    │   logs/min  │   window    │ • GPU       │ • Context   │ • Vertical  │
+    │ • Parallel  │ • Real-time │   optional  │   aware     │ • Auto      │
+    │ • Batch     │ • Streaming │ • Efficient │ • Type      │   scaling   │
+    │   support   │ • Low       │ • Optimized │   specific  │ • Load      │
+    │             │   overhead  │ • Cached    │ • Adaptive  │   balancing │
+    └─────────────┴─────────────┴─────────────┴─────────────┴─────────────┘
+
+                    🔧 TECHNOLOGY STACK
+                    
+    ┌─────────────┬─────────────┬─────────────┬─────────────┬─────────────┐
+    │ 🐍 LANGUAGE │ 🏗️ FRAMEWORK│ 🤖 AI/ML    │ 🛠️ TOOLS    │ ☁️ INFRA    │
+    │             │             │             │             │             │
+    │ • Python    │ • vLLM      │ • Qwen 7B   │ • Git       │ • Docker    │
+    │   3.8+      │ • OpenAI    │ • tiktoken  │ • GitHub    │ • Kubernetes│
+    │ • Bash      │   API       │ • Token     │ • Shell     │ • Cloud     │
+    │ • JSON      │ • Requests  │   counting  │ • CI/CD     │ • Monitoring│
+    │ • YAML      │ • FastAPI   │ • Embedding │ • Testing   │ • Logging   │
+    └─────────────┴─────────────┴─────────────┴─────────────┴─────────────┘
+
+                    📊 MODULE DEPENDENCIES
+                    
+    ┌─────────────────────────────────────────────────────────────────────┐
+    │                        DEPENDENCY GRAPH                             │
+    │                                                                     │
+    │  log_llm_pipeline.py ──┐                                           │
+    │  test_pipeline.py ──────┼───► prompt_templates.py                   │
+    │  auto_analysis.py ──────┘           │                               │
+    │                                      ▼                               │
+    │  realtime_logger.py ──┐           sliding_window.py                 │
+    │  log_monitor.py ───────┼───► tiktoken                               │
+    │  log_dashboard.py ─────┘           │                               │
+    │                                      ▼                               │
+    │  interactive_test.py ──┐           requests                         │
+    │  batch_test.py ────────┼───► vLLM Server                           │
+    │  performance_test.py ──┘           │                               │
+    │                                      ▼                               │
+    │  log_generator.py ──────────────────► Qwen 7B Model                 │
+    │                                                                     │
+    └─────────────────────────────────────────────────────────────────────┘
+
+                    🎯 USE CASE SCENARIOS
+                    
+    ┌─────────────┬─────────────┬─────────────┬─────────────┬─────────────┐
+    │ 👨‍💻 DEV      │ �� TESTING  │ 🏭 PRODUCTION│ 📊 ANALYTICS │ 🚨 INCIDENT │
+    │             │             │             │             │             │
+    │ • Local     │ • Unit      │ • Real-time │ • Batch     │ • Emergency │
+    │   debugging │   tests     │   monitoring│   analysis  │   response  │
+    │ • Feature   │ • Integration│ • Auto      │ • Reports   │ • Critical  │
+    │   testing   │   tests     │   scaling   │ • Trends    │   alerts    │
+    │ • Mock      │ • Performance│ • Load      │ • Patterns  │ • Root      │
+    │   data      │   tests     │   balancing │ • Insights  │   cause     │
+    │ • Debug     │ • Stress    │ • High      │ • ML        │ • Recovery  │
+    │   mode      │   tests     │   availability│   models   │   plans     │
+    └─────────────┴─────────────┴─────────────┴─────────────┴─────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    🎉 END OF ARCHITECTURE DIAGRAM                              │
+└─────────────────────────────────────────────────────────────────────────────────┘

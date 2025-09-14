@@ -14,15 +14,13 @@ import requests
 # 새로운 모듈 import
 from prompt_templates import get_prompt_templates, AnalysisType
 from sliding_window import create_sliding_window, WindowConfig, WindowProcessor
-
-OPENAI_BASE = "http://127.0.0.1:8000/v1"
-MODEL = "Qwen/Qwen2.5-7B-Instruct"  # Qwen 7B 모델명
+from config import OPENAI_BASE, MODEL, DEFAULT_WINDOW_TOKENS, DEFAULT_OVERLAP_RATIO, DEFAULT_MIN_TOKENS
 
 # 윈도우 설정
 WINDOW_CONFIG = WindowConfig(
-    max_tokens=5000,
-    overlap_ratio=0.15,
-    min_tokens=100
+    max_tokens=DEFAULT_WINDOW_TOKENS,
+    overlap_ratio=DEFAULT_OVERLAP_RATIO,
+    min_tokens=DEFAULT_MIN_TOKENS
 )
 
 # 기존 함수들은 새로운 모듈로 대체됨

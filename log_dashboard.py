@@ -182,7 +182,8 @@ class LogDashboard:
         """vLLM 서버 상태 확인"""
         try:
             import requests
-            response = requests.get("http://127.0.0.1:8000/v1/models", timeout=3)
+            from config import get_vllm_url
+            response = requests.get(f"{get_vllm_url()}/models", timeout=3)
             return response.status_code == 200
         except:
             return False

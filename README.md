@@ -59,7 +59,16 @@ cd sliding-window-llm
 pip install -r requirements.txt
 ```
 
-### 3. vLLM 서버 시작 (Qwen 7B)
+### 3. 환경 설정 (선택사항)
+```bash
+# 환경변수 설정 파일 복사
+cp env.example .env
+
+# 필요에 따라 .env 파일 수정
+nano .env
+```
+
+### 4. vLLM 서버 시작 (Qwen 7B)
 ```bash
 # 방법 1: 스크립트 사용
 ./start_qwen_server.sh
@@ -73,7 +82,7 @@ python3 -m vllm.entrypoints.openai.api_server \
   --trust-remote-code
 ```
 
-### 4. 로그 분석 실행
+### 5. 로그 분석 실행
 ```bash
 python3 log_llm_pipeline.py
 ```
@@ -150,8 +159,20 @@ WindowConfig(
 ## 설정 옵션
 
 ### vLLM 서버 설정
-- `OPENAI_BASE = "http://127.0.0.1:8000/v1"` - API 엔드포인트
-- `MODEL = "Qwen/Qwen2.5-7B-Instruct"` - 사용할 모델명
+- `VLLM_HOST` - vLLM 서버 호스트 (기본값: 127.0.0.1)
+- `VLLM_PORT` - vLLM 서버 포트 (기본값: 8000)
+- `MODEL_NAME` - 사용할 모델명 (기본값: Qwen/Qwen2.5-7B-Instruct)
+
+### 환경변수 설정
+```bash
+# .env 파일에서 설정 가능
+VLLM_HOST=your-server-ip
+VLLM_PORT=8000
+MODEL_NAME=Qwen/Qwen2.5-7B-Instruct
+WINDOW_TOKENS=5000
+OVERLAP_RATIO=0.15
+ENVIRONMENT=production
+```
 
 ## 출력
 
@@ -561,6 +582,32 @@ df -h
 # 로그 로테이션 설정 확인
 # realtime_logger.py에서 로테이션 비활성화
 ```
+
+## 🔒 보안 고려사항
+
+### 환경변수 사용
+- **민감한 정보**: IP 주소, 포트, API 키 등은 환경변수로 관리
+- **설정 파일**: `.env` 파일을 사용하여 로컬 설정 관리
+- **Git 제외**: `.env` 파일은 `.gitignore`에 포함되어 버전 관리에서 제외
+
+### 네트워크 보안
+```bash
+# 프로덕션 환경에서 권장 설정
+VLLM_HOST=your-secure-server-ip
+VLLM_PORT=8000
+ENVIRONMENT=production
+ALLOWED_HOSTS=your-domain.com,your-ip
+```
+
+### API 보안
+- **인증**: API_KEY 환경변수로 인증 설정 가능
+- **방화벽**: vLLM 서버 포트에 대한 접근 제한
+- **HTTPS**: 프로덕션에서는 HTTPS 사용 권장
+
+### 로그 보안
+- **민감한 데이터**: 로그에서 개인정보, 패스워드 등 제거
+- **접근 권한**: 로그 파일에 대한 적절한 파일 권한 설정
+- **암호화**: 필요시 로그 파일 암호화
 
 ## 성능 최적화
 

@@ -24,7 +24,8 @@ class AutoAnalyzer:
         self.max_logs_per_analysis = 100  # 분석당 최대 로그 수
         
         # vLLM 서버 설정
-        self.vllm_url = "http://127.0.0.1:8000/v1"
+        from config import get_vllm_url
+        self.vllm_url = get_vllm_url()
         self.model_name = "Qwen/Qwen2.5-7B-Instruct"
         self.vllm_available = False
         
